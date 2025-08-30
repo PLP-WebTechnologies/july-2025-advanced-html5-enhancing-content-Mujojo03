@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Content & Forms Assignment</title>
+
+  <!-- SEO & accessibility metadata -->
+  <meta name="description" content="Assignment: Enhancing HTML5 Content & Mastering Forms with lists, tables, media, and a complete form.">
+  <meta name="author" content="Your Name">
+  <meta name="keywords" content="HTML5, forms, accessibility, semantic HTML, web development">
+  <meta name="robots" content="index, follow">
+</head>
+<body>
+  <!-- Skip Navigation for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- HEADER -->
+  <header role="banner" itemscope itemtype="http://schema.org/WPHeader">
+    <h1 itemprop="headline">My HTML5 Enhanced Page</h1>
+    <p itemprop="description">A simple webpage with lists, tables, media, and a complete form.</p>
+  </header>
+
+    <!-- MAIN CONTENT -->
+  <main id="main-content" role="main" itemscope itemtype="http://schema.org/CreativeWork">
+    <!-- LISTS -->
+    <section>
+      <h2>My Favorite Web Development Topics</h2>
+      <ul>
+        <li>HTML5 Basics</li>
+        <li>Accessibility</li>
+        <li>Forms & Validation</li>
+        <li>SEO</li>
+      </ul>
+
+      <h3>Steps to Build a Web Page</h3>
+      <ol>
+        <li>Plan the structure</li>
+        <li>Write semantic HTML</li>
+        <li>Add accessibility features</li>
+        <li>Test for validation</li>
+      </ol>
+    </section>
+
+    <!-- TABLE -->
+    <section>
+      <h2>Weekly Study Schedule</h2>
+      <table border="1">
+        <caption>My Study Plan</caption>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML5 Basics</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Forms & Inputs</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Accessibility</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- MEDIA -->
+    <section>
+      <h2>HTML5 Media</h2>
+      <h3>Sample Audio</h3>
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        <!-- Fallback text for unsupported browsers -->
+      </audio>
+
+      <h3>Sample Video</h3>
+      <video controls width="320" preload="metadata" poster="https://via.placeholder.com/320x180">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+
+      </video>
+    </section>
+
+    <section>
+      <h2>Modern HTML5 Features</h2>
+      
+      <details>
+        <summary>Click to learn more about HTML5 features</summary>
+        <p>HTML5 introduced many new semantic elements and APIs that make web development more powerful and accessible. Some key features include:</p>
+        <ul>
+          <li>Semantic elements like header, footer, nav, article, section</li>
+          <li>Form validation attributes</li>
+          <li>Audio and video elements</li>
+          <li>Canvas and SVG graphics</li>
+          <li>Local storage APIs</li>
+        </ul>
+      </details>
+
+      <h3>Course Progress</h3>
+      <label for="html-progress">HTML5 Basics Progress:</label>
+      <progress id="html-progress" value="75" max="100">75%</progress>
+      
+      <h3>Skill Level</h3>
+      <label for="html-skill">HTML5 Skill Level:</label>
+      <meter id="html-skill" value="0.8" min="0" max="1" low="0.3" high="0.7" optimum="0.8">80%</meter>
+    </section>
+
+      <section aria-labelledby="registration-form-heading" itemscope itemtype="http://schema.org/ContactPage">
+        <h2 id="registration-form-heading">Registration Form</h2>
+        <form action="#" method="post" aria-describedby="form-instructions" itemprop="mainEntity">
+          <p id="form-instructions">Please fill out the form below. All fields marked with * are required.</p>
+          <fieldset>
+            <legend>Personal Information</legend>
+            
+            <!-- Name -->
+            <label for="fullname">Full Name: <span aria-hidden="true">*</span></label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3" aria-required="true" aria-describedby="fullname-desc">
+            <span id="fullname-desc" class="sr-only">Minimum 3 characters</span>
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email: <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="email" aria-required="true" aria-describedby="email-desc">
+            <span id="email-desc" class="sr-only">Enter a valid email address</span>
+            <br><br>
+
+            <!-- Password -->
+            <label for="password">Password: <span aria-hidden="true">*</span></label>
+            <input type="password" id="password" name="password" placeholder="Minimum 6 characters" required minlength="6" aria-required="true" aria-describedby="password-desc">
+            <span id="password-desc" class="sr-only">Minimum 6 characters</span>
+            <br><br>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" aria-describedby="phone-desc">
+            <small id="phone-desc">Format: 123-456-7890</small>
+            <br><br>
+
+            <!-- Date -->
+            <label for="dob">Date of Birth: <span aria-hidden="true">*</span></label>
+            <input type="date" id="dob" name="dob" required aria-required="true">
+            <br><br>
+
+            <!-- Gender -->
+            <label>Gender: <span aria-hidden="true">*</span></label>
+            <input type="radio" id="male" name="gender" value="male" required aria-required="true">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <br><br>
+          </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          
+          <!-- Select -->
+          <label for="course">Choose a Course: <span aria-hidden="true">*</span></label>
+          <select id="course" name="course" required aria-required="true" aria-describedby="course-desc">
+            <option value="">--Select--</option>
+            <option value="html">HTML5 Basics</option>
+            <option value="css">CSS Fundamentals</option>
+            <option value="js">JavaScript Basics</option>
+          </select>
+          <span id="course-desc" class="sr-only">Please select a course</span>
+          <br><br>
+
+          <!-- Checkbox -->
+          <label>Subscribe to:</label>
+          <input type="checkbox" id="newsletter" name="subscribe" value="newsletter" aria-describedby="newsletter-desc">
+          <label for="newsletter">Newsletter</label>
+          <span id="newsletter-desc" class="sr-only">Receive our newsletter</span>
+          
+          <input type="checkbox" id="updates" name="subscribe" value="updates" aria-describedby="updates-desc">
+          <label for="updates">Course Updates</label>
+          <span id="updates-desc" class="sr-only">Receive course updates</span>
+          <br><br>
+        </fieldset>
+
+        <!-- Submit -->
+        <button type="submit" aria-label="Submit registration form">Register</button>
+        <button type="reset" aria-label="Reset form fields">Reset</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 My HTML5 Assignment | Built with ❤️ using HTML5 only</p>
+  </footer>
+
+  <!-- CSS for the features -->
+  <style>
+    body {
+      background-color: #8F1F09;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    main {
+      background-color: #ffffff;
+      color: #333333;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      text-decoration: none;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+    
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    input:invalid {
+      border-color: #ff6b6b;
+    }
+    
+    input:valid {
+      border-color: #51cf66;
+    }
+    
+    /* Form styling for better contrast */
+    input, select, textarea {
+      background-color: #f8f9fa;
+      border: 1px solid #ced4da;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    
+    fieldset {
+      border: 2px solid #8F1F09;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    legend {
+      font-weight: bold;
+      color: #8F1F09;
+      padding: 0 10px;
+    }
+  </style>
+</body>
+</html>
